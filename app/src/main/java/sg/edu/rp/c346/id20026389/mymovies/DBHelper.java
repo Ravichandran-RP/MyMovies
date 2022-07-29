@@ -41,7 +41,7 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public long insertMovie(String title, String genre, int year, int rating) {
+    public long insertMovie(String title, String genre, int year, String rating) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_TITLE, title);
