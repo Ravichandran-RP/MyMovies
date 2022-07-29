@@ -104,8 +104,7 @@ public class MainActivity extends AppCompatActivity {
         btnShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this,
-                        SecondActivity.class);
+                Intent i = new Intent(MainActivity.this,SecondActivity.class);
                 startActivity(i);
             }
         });

@@ -67,10 +67,10 @@ import androidx.appcompat.app.AppCompatActivity;
             Intent i = getIntent();
             data = (Movie) i.getSerializableExtra("data");
 
-            etID.setText(data.get_id());
+            etID.setText(data.get_id()+"");
             etTitle.setText(data.getTitle());
             etGenre.setText(data.getGenre());
-            etYear.setText(data.getYear());
+            etYear.setText(data.getYear()+"");
 
             btnUpdate.setOnClickListener(new View.OnClickListener() {
                 @Override

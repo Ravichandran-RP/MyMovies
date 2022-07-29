@@ -30,11 +30,21 @@ public class SecondActivity extends AppCompatActivity {
         lvMovie = findViewById(R.id.listViewShowMovies);
         alMovieList = new ArrayList<>();
         caMovie = new CustomAdapter(this, R.layout.row, alMovieList);
+        DBHelper dbh = new DBHelper(SecondActivity.this);
+        alMovieList.addAll(dbh.getAllMovies());
         lvMovie.setAdapter(caMovie);
 
-        lvMovie.setOnClickListener(new View.OnClickListener() {
+//        lvMovie.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i = new Intent(SecondActivity.this,
+//                        ThirdActivity.class);
+//                startActivity(i);
+//            }
+//        });
+        lvMovie.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Intent i = new Intent(SecondActivity.this,
                         ThirdActivity.class);
                 startActivity(i);

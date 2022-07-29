@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class DBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "movies.db";
-    private static final int DATABASE_VERSION = 0;
+    private static final int DATABASE_VERSION = 1;
     private static final String TABLE_MOVIE = "movie";
     private static final String COLUMN_ID = "_id";
     private static final String COLUMN_TITLE = "title";
@@ -37,7 +37,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         //db.execSQL("ALTER TABLE " + TABLE_SONG + " ADD COLUMN module_name TEXT ");
-        db.execSQL("DROP TABLE movie");
+//        db.execSQL("DROP TABLE movie");
         onCreate(db);
     }
 
