@@ -97,9 +97,10 @@ import androidx.appcompat.app.AppCompatActivity;
             btnCancel.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent i = new Intent(ThirdActivity.this,
-                            SecondActivity.class);
-                    startActivity(i);
+                    //Intent i = new Intent(ThirdActivity.this,
+                            //SecondActivity.class);
+                    //startActivity(i);
+                    finish();
                 }
             });
 
