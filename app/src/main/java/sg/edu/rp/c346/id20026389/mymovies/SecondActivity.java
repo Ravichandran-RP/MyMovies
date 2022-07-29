@@ -3,6 +3,8 @@ package sg.edu.rp.c346.id20026389.mymovies;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -21,7 +23,15 @@ public class SecondActivity extends AppCompatActivity {
 
         lvMovie = findViewById(R.id.listViewShowMovies);
         alMovieList = new ArrayList<>();
+        caMovie = new CustomAdapter(this, R.layout.row, alMovieList);
+        lvMovie.setAdapter(caMovie);
 
+        lvMovie.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+        });
 
     }
 }
