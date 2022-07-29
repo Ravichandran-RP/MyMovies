@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -26,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         etTtile=findViewById(R.id.etMovieTitle);
         etGenre=findViewById(R.id.etGenre);
         etYear=findViewById(R.id.etYear);
-        btnInsert=findViewById(R.id.btnInsert);
-        btnShow=findViewById(R.id.btnShow);
+        btnInsert=findViewById(R.id.btnUpdate);
+        btnShow=findViewById(R.id.btnDelete);
         spnRating=findViewById(R.id.spinnerRating);
 
 

@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="15dp"
-    tools:context=".MainActivity">
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie ID"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etMovieID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="" />
 
     <TextView
         android:id="@+id/tvMovieTitle"
@@ -25,7 +37,7 @@
 
     <TextView
         android:id="@+id/tvGenre"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Genre"
         android:textSize="20sp" />
@@ -40,7 +52,7 @@
 
     <TextView
         android:id="@+id/tvYear"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Year"
         android:textSize="20sp" />
@@ -51,7 +63,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter year here"
-        android:inputType="number"  />
+        android:inputType="number" />
 
     <Spinner
         android:id="@+id/spinnerRating"
@@ -69,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="INSERT" />
+            android:text="UPDATE" />
 
         <Space
             android:layout_width="10dp"
@@ -80,7 +92,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="SHOW LIST" />
+            android:text="DELETE" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="CANCEL" />
 
 </LinearLayout>
