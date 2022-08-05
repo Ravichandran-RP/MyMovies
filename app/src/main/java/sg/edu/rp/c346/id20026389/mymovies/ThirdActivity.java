@@ -32,7 +32,7 @@ import androidx.appcompat.app.AppCompatActivity;
             btnCancel = findViewById(R.id.btnCancel);
 
             spnRating=findViewById(R.id.spinnerRating);
-
+            etID.setEnabled(false);
 
             spnRating.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
@@ -97,9 +97,6 @@ import androidx.appcompat.app.AppCompatActivity;
             btnCancel.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //Intent i = new Intent(ThirdActivity.this,
-                            //SecondActivity.class);
-                    //startActivity(i);
                     finish();
                 }
             });
