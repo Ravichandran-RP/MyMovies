@@ -7,12 +7,14 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
     public class ThirdActivity extends AppCompatActivity {
 
-        EditText etID,etTitle,etGenre,etYear;
+        EditText etTitle,etGenre,etYear;
+        TextView etID;
         Button btnUpdate, btnDelete, btnCancel;
         Spinner spnRating;
         String rating;
