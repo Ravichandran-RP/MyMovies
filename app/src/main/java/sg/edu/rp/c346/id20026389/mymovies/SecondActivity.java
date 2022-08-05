@@ -33,28 +33,39 @@ public class SecondActivity extends AppCompatActivity {
         DBHelper dbh = new DBHelper(SecondActivity.this);
         alMovieList.addAll(dbh.getAllMovies());
         lvMovie.setAdapter(caMovie);
+        alMovieList.clear();
+        alMovieList.addAll(dbh.getAllMovies());
+        caMovie.notifyDataSetChanged();
 
-//        lvMovie.setOnClickListener(new View.OnClickListener() {
+
+//        lvMovie.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //            @Override
-//            public void onClick(View view) {
-//                Intent i = new Intent(SecondActivity.this,
-//                        ThirdActivity.class);
-//                startActivity(i);
-//            }
-//        });
+//            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+ //               Intent i = new Intent(SecondActivity.this,
+ //                       ThirdActivity.class);
+ //               startActivity(i);
+ //           }
+ //       });
+
         lvMovie.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Intent i = new Intent(SecondActivity.this,
-                        ThirdActivity.class);
+                Intent i = new Intent (SecondActivity.this, ThirdActivity.class);
+                i.putExtra("movie", alMovieList.get(position));
                 startActivity(i);
             }
         });
 
 //        btnShowMovies.setOnClickListener(new View.OnClickListener() {
 //            @Override
-//            public void onClick(View view) {
-//                if (lvMovie.)
+//            public void onClick(View v) {
+//                for (int i = 0; i < alMovieList.size(); i++) {
+//                    if (alMovieList.get(i).getRating().equalsIgnoreCase("PG13")) {
+//                        alMovieList.clear();
+//                        alMovieList.add(i);
+//                    }
+//                }
+//
 //            }
 //        });
 

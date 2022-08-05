@@ -65,7 +65,7 @@ import androidx.appcompat.app.AppCompatActivity;
             });
 
             Intent i = getIntent();
-            data = (Movie) i.getSerializableExtra("data");
+            data = (Movie) i.getSerializableExtra("movie");
 
             etID.setText(data.get_id()+"");
             etTitle.setText(data.getTitle());
