@@ -69,6 +69,16 @@ public class SecondActivity extends AppCompatActivity {
 //            }
 //        });
 
+        btnShowMovies.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DBHelper dbh = new DBHelper(SecondActivity.this);
+                alMovieList.clear();
+                alMovieList.addAll(dbh.getAllPG13Movies());
+                caMovie.notifyDataSetChanged();
+            }
+        });
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,5 +89,13 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
+
+
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        caMovie.notifyDataSetChanged();
     }
 }
