@@ -36,6 +36,7 @@ import androidx.appcompat.app.AppCompatActivity;
             spnRating=findViewById(R.id.spinnerRating);
             etID.setEnabled(false);
 
+
             spnRating.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -73,11 +74,13 @@ import androidx.appcompat.app.AppCompatActivity;
             etTitle.setText(data.getTitle());
             etGenre.setText(data.getGenre());
             etYear.setText(data.getYear()+"");
+            rating = data.getRating();
 
             btnUpdate.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     DBHelper dbh = new DBHelper(ThirdActivity.this);
+                    data.get_id();
                     data.setTitle(etTitle.getText().toString());
                     data.setGenre(etGenre.getText().toString());
                     data.setYear(Integer.parseInt(etYear.getText().toString()));

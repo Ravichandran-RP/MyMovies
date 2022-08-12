@@ -9,7 +9,8 @@ public class Movie implements Serializable {
     private int year;
     private String rating;
 
-    public Movie(String title, String genre, int year, String rating) {
+    public Movie(int _id, String title, String genre, int year, String rating) {
+        this._id = _id;
         this.title = title;
         this.genre = genre;
         this.year = year;

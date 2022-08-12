@@ -65,11 +65,12 @@ public class DBHelper extends SQLiteOpenHelper {
 
         if (cursor.moveToFirst()) {
             do {
+                int id = cursor.getInt(0);
                 String title = cursor.getString(1);
                 String genre = cursor.getString(2);
                 int year = cursor.getInt(3);
                 String rating = cursor.getString(4);
-                Movie note = new Movie(title,genre,year,rating);
+                Movie note = new Movie(id,title,genre,year,rating);
                 movies.add(note);
             } while (cursor.moveToNext());
         }
